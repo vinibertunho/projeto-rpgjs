@@ -40,13 +40,13 @@ xp *= 2
 
 console.log( `Nome do Heroi: ${nome}` );
 console.log(
-  `${nome}, o guerreiro pirata que seu nome era temido pelos mares tecnologicos ouviam seu nome ja ficavam com medo pelos mares tecnologicos ele era o pirata mais temido das atualidades.`
+    `${nome}, o guerreiro pirata que seu nome era temido pelos mares tecnologicos ouviam seu nome ja ficavam com medo pelos mares tecnologicos ele era o pirata mais temido das atualidades.`
 );
 console.log(
-  `Portando sua ${ARMA_INICIAL}, destruia silenciosamente seus inimigos que queriam criptografar seu ouro`
+    `Portando sua ${ARMA_INICIAL}, destruia silenciosamente seus inimigos que queriam criptografar seu ouro`
 );
 console.log(
-  `Com o nivel ${nivel}, tendo seu ataque de ${DANO_BASE}, era temido pelos bugs templarios que eram loucos para ter sua cabeça pendurada na parede`
+    `Com o nivel ${nivel}, tendo seu ataque de ${DANO_BASE}, era temido pelos bugs templarios que eram loucos para ter sua cabeça pendurada na parede`
 );
 console.log( `Seus ${NOME_ARMADURA}, te salva dos crackers que queria roubar seus dados e acabar com a sua vida ` );
 
@@ -75,96 +75,102 @@ console.log( `E depois de muito tempo ${nome} chega ao barco do Guardiao e o der
 
 
 
-//Missão intermediario
+console.log( "📜 PRÓLOGO: Ecos dos Mares Tecnológicos" );
+console.log( "Após conquistar fama entre os piratas digitais de Nassau, Edward Kenway, guerreiro destemido, parte para novas aventuras. O ouro em seu bolso e o brilho de sua lâmina oculta atraem olhares atentos. Mas um novo desafio surge no horizonte: forças misteriosas ameaçam a ordem dos algoritmos." );
+
 
 let nomePersonagem = "Edward Kenway";
 let classe = "Guerreiro";
-let vidaAtual = 150;
-let vidaMaxima = 300;
-let manaAtual = 30;
-let manaMaxima = 60;
+let vidaAtual = 100;
+let vidaMaxima = 100;
+let manaAtual = 50;
+let manaMaxima = 50;
 let nivelPersonagem = 1;
 let experiencia = 0;
 let ouroPersonagem = 100;
 
-// Novos atributos para batalha
-let forca = 30;
-let defesa = 20;
-let agilidade = 25;
+
+let forca = 15;
+let defesa = 10;
+let agilidade = 12;
 let combatesVencidos = 0;
 
-// Estado atual da história (continue de onde parou no Nível 1)
-let localAtual = "nassau";
-let missaoAtual = "nssau";
+
+let localAtual = "Nassau";
+let missaoAtual = "Proteger o código dos mares";
+
+// 🌅 CAPÍTULO 1: O Sinal dos Sábios (Condicionais Simples)
+console.log( "\n🌅 CAPÍTULO 1: O Sinal dos Sábios" );
 
 
-
-
-// CAPÍTULO 1: Condicionais Simples na narrativa
-console.log( "🌅 CAPÍTULO 1: O Aviso dos Monges" );
-
-// Verificação baseada no nível do personagem
 if ( nivelPersonagem < 3 ) {
-  console.log( "⚠️ Um monge o adverte:'Você ainda nao esta pronto para a missão' " );
-  console.log( "Mas " + nomePersonagem + " decide prosseguir mesmo assim..." );
+    console.log( "🔔 Um sábio do porto alerta: 'Ainda há muito a aprender, jovem guerreiro!'" );
 }
 
-// Verificação de recursos especiais
+
 if ( ouroPersonagem >= 100 ) {
-  console.log( `💰 Suas moedas estão transbordando no bolso, atraindo olhares dos ${nomeNpc}...` );
+    console.log( "💰 O som das moedas no seu cinto desperta a ganância de oportunistas nas docas..." );
 }
 
-// Verificação de classe específica
-if ( classe === "guerreiro" ) {
-  console.log( "⚔️ O sague de guerreiro corre nas suas veias" );
+
+if ( classe === "Guerreiro" ) {
+    console.log( "🗡️ O espírito do aço pulsa em seus músculos. Você sente-se pronto para desafios físicos." );
 }
 
-// CAPÍTULO 2: Escolha Estratégica
-console.log( "🛡️ CAPÍTULO 2: A Encruzilhada do Destino" );
+// 🛡️ CAPÍTULO 2: Rumo à Encruzilhada (Condicionais Compostas)
+console.log( "\n🛡️ CAPÍTULO 2: Rumo à Encruzilhada" );
 
-// Escolha baseada em recursos
-if ( ouroPersonagem >= 50 ) {
-  console.log( `Com o ouro suficiente ${nomePersonagem} compra melhores armas` );
-  forca += 8;
-  defesa += 6;
-  ouro -= 30;
-  console.log( `Sua força e sua defesa aumentaram seu ouro agora é ${ouroPersonagem}` );
+if ( ouro >= 50 ) {
+    console.log( "🏪 Com recursos de sobra, Edward investe em uma armadura reforçada na taverna dos engenheiros." );
+    forca += 5;
+    defesa += 3;
+    ouro -= 50;
+    console.log( "✨ Força e defesa cresceram! Ouro restante: " + ouro );
 } else {
-  console.log( `sem ouro suficinte ${nomePersonagem} deve em confiar em apenas em suas propias habilidades` );
-  console.log( "A adversidade fortalece o espírito! Agilidade +2" );
-  agilidade += 2;
+    console.log( "🪙 Sem moedas suficientes, Edward aposta tudo em sua astúcia e velocidade." );
+    agilidade += 2;
+    console.log( "Novo valor de agilidade: " + agilidade );
 }
 
-// Sistema de recompensas narrativo
+// Verifica se ganhou experiência suficiente para subir de nível
 if ( experiencia >= 100 ) {
-  console.log( `O esforço supera quem é habilidoso ${nomePersonagem} sente-se mais forte` );
-  nivel++;
-  experiencia = 0;
-  vidaAtual = vidaMaxima; // Vida restaurada
+    console.log( "🌟 O treinamento rendeu frutos! Edward atinge um novo patamar de habilidade." );
+    nivel++;
+    experiencia = 0;
+    vidaAtual = vidaMaxima;
 } else {
-  console.log( `${nomePersonagem} ainda se esforça para ter mais experiencia` );
-  console.log( `experiencia atual: ${experiencia} /100` );
+    console.log( "📈 O caminho é longo. Experiência atual: " + experiencia + "/100" );
 }
 
-// CAPÍTULO 3: A Batalha Decisiva
-console.log( "⚔️ CAPÍTULO 3: A Batalha Decisiva" );
-let poderInimigo = 40;
+// 🎭 CAPÍTULO 3: O Confronto dos Códigos (Condicionais Encadeadas)
+console.log( "\n🎭 CAPÍTULO 3: O Confronto dos Códigos" );
+let poderInimigo = 30;
 
-// Sistema de combate inteligente baseado na situação
-if ( vidaAtual <= 25 ) {
-  console.log( `Com pouca vida ${nomePersonagem}, se desespera e usa uma tatica errada` );
-  console.log( "Ataque final com toda a força restante!" );
-  poderInimigo -= ( forca * 2 );
-} else if ( manaAtual >= 20 && classe === "guerreiro" ) {
-  console.log( + nomePersonagem + " canaliza toda sua força!" );
-  console.log( "corte avastador!" );
-  poderInimigo -= ( forca + 10 );
-  manaAtual -= 23;
+if ( vidaAtual <= 30 ) {
+    console.log( "🚨 Com a energia no limite, Edward arrisca um golpe desesperado!" );
+    poderInimigo -= ( forca * 2 );
+} else if ( manaAtual >= 30 && classe === "Guerreiro" ) {
+    console.log( "💥 Edward canaliza toda sua força física em um golpe devastador!" );
+    poderInimigo -= ( forca + 10 );
+    manaAtual -= 30;
 } else if ( agilidade >= 15 ) {
-  console.log( "🏃‍♂️ Com a agilidade dos deuses, executa um ataque certeiro!" );
-  poderInimigo -= forca;
+    console.log( "⚡ Com reflexos aguçados, Edward surpreende o adversário!" );
+    poderInimigo -= forca;
 } else {
-  console.log( "🛡️ Luta defensiva e calculada!" );
-  poderInimigo -= ( forca / 2 );
-  vidaAtual += 10; // Recupera um pouco de vida
+    console.log( "🛡️ Edward opta por uma defesa disciplinada, esperando o erro do oponente." );
+    poderInimigo -= ( forca / 2 );
+    vidaAtual += 10;
 }
+
+// 🏆 EPÍLOGO: O Destino dos Mares Digitais
+console.log( "\n🏆 EPÍLOGO: O Destino dos Mares Digitais" );
+if ( poderInimigo <= 0 ) {
+    console.log( "🎉 VITÓRIA! Edward derrota seu rival e sua lenda ecoa entre os algoritmos dos sete mares." );
+    experiencia += 100;
+    combatesVencidos++;
+    console.log( "Sua reputação cresce. Missões ainda maiores aguardam no horizonte..." );
+} else {
+    console.log( "🤕 A batalha foi dura, mas Edward sobrevive para lutar em outro dia." );
+}
+
+console.log( "\n🏁 FIM DO CAPÍTULO - Continue sua jornada e domine cada linha de código!" );
