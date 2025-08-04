@@ -40,7 +40,7 @@ xp *= 2
 
 console.log( `Nome do Heroi: ${nome}` );
 console.log(
-    `${nome}, o guerreiro pirata que seu nome era temido pelos mares tecnologicos ouviam seu nome ja ficavam com medo pelos mares tecnologicos ele era o pirata mais temido das atualidades.`
+    `${nome}, o guerreiro pirata que seu nome era temido pelos mares tecnologicos ouviam seu nome ja ficavam com medo pelas aguas da tecnologia ele era o pirata mais temido das atualidades.`
 );
 console.log(
     `Portando sua ${ARMA_INICIAL}, destruia silenciosamente seus inimigos que queriam criptografar seu ouro`
