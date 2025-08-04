@@ -64,9 +64,107 @@ console.log( `E com esse ouro que o ${nome} acabou passando em uma vila e achou 
 
 console.log( `E chegando perto do guardiao o ${nomeNpc2} e o acabou derrotando com as ${NOME_ARMA}` )
 console.log( 'Vida suficiente?', vidaSuficiente );
-console.log('Ataque forte?' , ataqueForte);
-console.log('nivel suficiente?' , nivelAlcançado);
+console.log( 'Ataque forte?', ataqueForte );
+console.log( 'nivel suficiente?', nivelAlcançado );
 
-console.log('Pode efrentar o Guardião?' , podeEnfrentarGuardiao);
+console.log( 'Pode efrentar o Guardião?', podeEnfrentarGuardiao );
 
-console.log(`E depois de muito tempo ${nome} chega ao barco do Guardiao e o derrota arracando sua cabeça com as ${NOME_ARMA} e ganhando ${xp} de xp e vira o rei dos mares tecnologico`);
+console.log( `E depois de muito tempo ${nome} chega ao barco do Guardiao e o derrota arracando sua cabeça com as ${NOME_ARMA} e ganhando ${xp} de xp e vira o rei dos mares tecnologico` );
+
+
+
+
+
+//Missão intermediario
+
+let nomePersonagem = "Edward Kenway";
+let classe = "Guerreiro";
+let vidaAtual = 150;
+let vidaMaxima = 300;
+let manaAtual = 30;
+let manaMaxima = 60;
+let nivelPersonagem = 1;
+let experiencia = 0;
+let ouroPersonagem = 100;
+
+// Novos atributos para batalha
+let forca = 30;
+let defesa = 20;
+let agilidade = 25;
+let combatesVencidos = 0;
+
+// Estado atual da história (continue de onde parou no Nível 1)
+let localAtual = "nassau";
+let missaoAtual = "nssau";
+
+
+
+
+// CAPÍTULO 1: Condicionais Simples na narrativa
+console.log( "🌅 CAPÍTULO 1: O Aviso dos Monges" );
+
+// Verificação baseada no nível do personagem
+if ( nivelPersonagem < 3 ) {
+  console.log( "⚠️ Um monge o adverte:'Você ainda nao esta pronto para a missão' " );
+  console.log( "Mas " + nomePersonagem + " decide prosseguir mesmo assim..." );
+}
+
+// Verificação de recursos especiais
+if ( ouroPersonagem >= 100 ) {
+  console.log( `💰 Suas moedas estão transbordando no bolso, atraindo olhares dos ${nomeNpc}...` );
+}
+
+// Verificação de classe específica
+if ( classe === "guerreiro" ) {
+  console.log( "⚔️ O sague de guerreiro corre nas suas veias" );
+}
+
+// CAPÍTULO 2: Escolha Estratégica
+console.log( "🛡️ CAPÍTULO 2: A Encruzilhada do Destino" );
+
+// Escolha baseada em recursos
+if ( ouroPersonagem >= 50 ) {
+  console.log( `Com o ouro suficiente ${nomePersonagem} compra melhores armas` );
+  forca += 8;
+  defesa += 6;
+  ouro -= 30;
+  console.log( `Sua força e sua defesa aumentaram seu ouro agora é ${ouroPersonagem}` );
+} else {
+  console.log( `sem ouro suficinte ${nomePersonagem} deve em confiar em apenas em suas propias habilidades` );
+  console.log( "A adversidade fortalece o espírito! Agilidade +2" );
+  agilidade += 2;
+}
+
+// Sistema de recompensas narrativo
+if ( experiencia >= 100 ) {
+  console.log( `O esforço supera quem é habilidoso ${nomePersonagem} sente-se mais forte` );
+  nivel++;
+  experiencia = 0;
+  vidaAtual = vidaMaxima; // Vida restaurada
+} else {
+  console.log( `${nomePersonagem} ainda se esforça para ter mais experiencia` );
+  console.log( `experiencia atual: ${experiencia} /100` );
+}
+
+// CAPÍTULO 3: A Batalha Decisiva
+console.log( "⚔️ CAPÍTULO 3: A Batalha Decisiva" );
+let poderInimigo = 40;
+
+// Sistema de combate inteligente baseado na situação
+if ( vidaAtual <= 25 ) {
+  console.log( `Com pouca vida ${nomePersonagem}, se desespera e usa uma tatica errada` );
+  console.log( "Ataque final com toda a força restante!" );
+  poderInimigo -= ( forca * 2 );
+} else if ( manaAtual >= 20 && classe === "guerreiro" ) {
+  console.log( + nomePersonagem + " canaliza toda sua força!" );
+  console.log( "corte avastador!" );
+  poderInimigo -= ( forca + 10 );
+  manaAtual -= 23;
+} else if ( agilidade >= 15 ) {
+  console.log( "🏃‍♂️ Com a agilidade dos deuses, executa um ataque certeiro!" );
+  poderInimigo -= forca;
+} else {
+  console.log( "🛡️ Luta defensiva e calculada!" );
+  poderInimigo -= ( forca / 2 );
+  vidaAtual += 10; // Recupera um pouco de vida
+}
