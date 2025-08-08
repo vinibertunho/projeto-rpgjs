@@ -215,3 +215,125 @@ console.log( "💍 Novo artefato inserido! Mochila agora: " + inventario );
 let itemRemovido = inventario.pop();
 console.log( "📤 Item descartado: " + itemRemovido );
 console.log( "🎒 Mochila atualizada: " + inventario );
+
+// === CAPÍTULO 2: EXPLORAÇÃO DAS GALERIAS MÁGICAS ===
+console.log( "" );
+console.log( "⚔️ CAPÍTULO 2: A Jornada pelas Salas Secretas" );
+
+console.log( "🗺️ Iniciando a travessia por " + salasCastelo.length + " aposentos mágicos..." );
+
+for ( let i = 0; i < salasCastelo.length; i++ ) {
+    console.log( "🚪 Ambiente " + ( i + 1 ) + ": " + salasCastelo[ i ] );
+    if ( i === 0 ) {
+        console.log( "📚 " + nomePersonagem + " descobre pergaminhos enigmáticos!" );
+        experiencia += 50;
+    } else if ( i === 1 ) {
+        console.log( "💠 Espelhos reluzentes aumentam a energia mística!" );
+        tesouroColetado.push( "Fragmento Luminoso" );
+    } else {
+        console.log( "⏳ O tempo se embaralha ao redor do herói!" );
+        vidaAtual -= 10;
+    }
+}
+console.log( "📊 Exploração encerrada! XP: " + experiencia + " | Vida: " + vidaAtual );
+
+// === CAPÍTULO 3: ALIANÇA DOS CAMPEÕES ===
+console.log( "" );
+console.log( "🤝 CAPÍTULO 3: Formação da Irmandade" );
+
+console.log( "🏹 " + nomePersonagem + " reúne seus aliados para a ofensiva final:" );
+for ( let i = 0; i < aliados.length; i++ ) {
+    let aliado = aliados[ i ];
+    console.log( "⚡ Companheiro " + ( i + 1 ) + ": " + aliado + " se integra à expedição!" );
+    if ( i === 0 ) {
+        console.log( "🔮 Como mentor arcano, " + aliado + " amplifica o poder coletivo!" );
+        ouro += 50;
+    } else if ( i === 1 ) {
+        console.log( "🛡️ Como guardiã suprema, " + aliado + " reforça a proteção do grupo!" );
+        vidaMaxima += 30;
+    } else {
+        console.log( "🏹 Como estrategista, " + aliado + " aprimora as manobras de ataque!" );
+        experiencia += 40;
+    }
+}
+console.log( "🎖️ Equipe fortalecida! Ouro: " + ouro + " | Vida máxima: " + vidaMaxima );
+
+// === CAPÍTULO 4: DUELO FINAL DOS ARRAYS ===
+console.log( "" );
+console.log( "🐉 CAPÍTULO 4: Desafio contra as Criaturas Lendárias" );
+
+let inimigosBatalha = [ "Guardião Prismático", "Sombra Titânica", "Dragão do Caos" ];
+let danoRecebido = [];
+
+console.log( "💀 " + nomePersonagem + " encara " + inimigosBatalha.length + " criaturas sobrenaturais!" );
+
+for ( let i = 0; i < inimigosBatalha.length; i++ ) {
+    let inimigo = inimigosBatalha[ i ];
+    let dano = Math.floor( Math.random() * 30 ) + 10;
+    console.log( "⚔️ Confronto " + ( i + 1 ) + ": Oponente - " + inimigo );
+    console.log( "💥 " + nomePersonagem + " inflige " + dano + " de dano!" );
+    danoRecebido.push( dano );
+
+    if ( i === 0 ) {
+        console.log( "💠 Vitória inicial! Fragmentos mágicos concedem bônus especial!" );
+        tesouroColetado.push( "Pedra Prismática" );
+    } else if ( i === 1 ) {
+        console.log( "🌑 Segundo combate! Energias sombrias esgotam as forças do herói!" );
+        vidaAtual -= 15;
+    } else {
+        console.log( "🔥 Duelo decisivo! O dragão se rende! Glória máxima conquistada!" );
+        experiencia += 100;
+        tesouroColetado.push( "Escama do Caos" );
+    }
+}
+
+let danoTotal = 0;
+for ( let i = 0; i < danoRecebido.length; i++ ) {
+    danoTotal += danoRecebido[ i ];
+    console.log( "📊 Disputa " + ( i + 1 ) + " - Dano causado: " + danoRecebido[ i ] );
+}
+
+console.log( "⚡ Dano somado: " + danoTotal );
+console.log( "🏆 Relíquias obtidas: " + tesouroColetado.length + " itens lendários!" );
+
+// === EPÍLOGO: O SENHOR DOS ARRAYS ===
+console.log( "" );
+console.log( "👑 === EPÍLOGO: " + nomePersonagem + " - DOMINADOR DA FORTALEZA ===" );
+
+console.log( "📈 Resumo Final da Jornada:" );
+console.log( "• Patamar de evolução: " + nivel );
+console.log( "• Experiência acumulada: " + experiencia );
+console.log( "• Vitalidade restante: " + vidaAtual + "/" + vidaMaxima );
+console.log( "• Ouro arrecadado: " + ouro );
+console.log( "• Itens na mochila: " + inventario.length );
+console.log( "• Companheiros leais: " + aliados.length );
+console.log( "• Tesouros lendários: " + tesouroColetado.length );
+
+console.log( "" );
+console.log( "🌟 O MITO CONTINUA..." );
+console.log( nomePersonagem + " tornou-se uma lenda, mestre absoluto das coleções mágicas." );
+console.log( "Seu raciocínio forjado em repetições e desafios complexos inspira novos aventureiros." );
+console.log( "Os aliados celebram sua liderança e organização incomparáveis." );
+console.log( "Artefatos e segredos encontrados serão estudados por gerações futuras." );
+console.log( "O horizonte reserva desafios com funções místicas e enigmas de objetos mágicos." );
+console.log( "Lendas sussurram que o castelo dos arrays era apenas o início de uma saga infinita." );
+console.log( "O guerreiro caminha para o desconhecido, sedento por novas conquistas." );
+console.log( "Seu nome agora ecoa nas criptas digitais como símbolo de domínio e coragem." );
+console.log( "Que venham as próximas torres, bibliotecas e desafios dos códigos!" );
+console.log( "⚡ GUERREIRO ETERNO DOS ARRAYS ⚡" );
+
+console.log( "" );
+console.log( "🎯 FIM DO NÍVEL 3 | NOVOS DESAFIOS TE AGUARDAM NO REINO DOS CÓDIGOS! 🎯" );
+
+// === DESAFIO EXTRA: Classificação dos Artefatos ===
+let itensRaros = [];
+let itensComuns = [];
+for ( let item of inventario ) {
+    if ( item.includes( "Supremo" ) || item.includes( "Incandescente" ) ) {
+        itensRaros.push( item );
+    } else {
+        itensComuns.push( item );
+    }
+}
+console.log( "💎 Artefatos Raros: " + itensRaros );
+console.log( "🔧 Artefatos Comuns: " + itensComuns );
