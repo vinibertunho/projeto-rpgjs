@@ -174,3 +174,20 @@ if ( poderInimigo <= 0 ) {
 }
 
 console.log( "\n🏁 FIM DO CAPÍTULO - Continue sua jornada e domine cada linha de código!" );
+// === SAGA CONTÍNUA - NÍVEL 3 ===
+// Herói evoluído, pronto para o desafio do Castelo dos Arrays!
+
+let nomePersonagemm = "Edward Kenway";
+let classee = "Guerreiro";
+let nivell = 3;
+let vidaAtuala = 120;
+let vidaMaximaa = 120;
+let experienciaa = 200;
+let ouroo = 150;
+
+// Novos recursos mágicos e companheiros
+let inventario = [ "Elixir Vital", "Sabre Incandescente", "Corselete de Aço" ];
+let aliados = [ "Feiticeiro Eldrin", "Sentinela Luna", "Batedor Vex" ];
+let inimigosEncontrados = [ "Duende das Sombras", "Orc Furioso", "Serpente Alada" ];
+let salasCastelo = [ "Salão dos Tomos", "Galeria dos Espelhos", "Câmara do Relógio" ];
+let tesouroColetado = [];
