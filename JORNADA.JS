@@ -231,7 +231,7 @@ let salasCastelo = [
 ];
 let tesouroColetado = [];
 console.log(
-  "🏰 === " + nomePersonagem + " INGRESSA NA FORTALEZA DOS ARRAYS ==="
+  "🏰 === " + nomePersonagemm + " INGRESSA NA FORTALEZA DOS ARRAYS ==="
 );
 console.log(
   "Depois das conquistas anteriores, o herói atravessa os portões do castelo lendário..."
