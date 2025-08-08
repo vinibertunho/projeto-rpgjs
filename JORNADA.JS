@@ -191,3 +191,27 @@ let aliados = [ "Feiticeiro Eldrin", "Sentinela Luna", "Batedor Vex" ];
 let inimigosEncontrados = [ "Duende das Sombras", "Orc Furioso", "Serpente Alada" ];
 let salasCastelo = [ "Salão dos Tomos", "Galeria dos Espelhos", "Câmara do Relógio" ];
 let tesouroColetado = [];
+console.log( "🏰 === " + nomePersonagem + " INGRESSA NA FORTALEZA DOS ARRAYS ===" );
+console.log( "Depois das conquistas anteriores, o herói atravessa os portões do castelo lendário..." );
+console.log( "Itens iniciais na mochila: " + inventario.length );
+
+
+// === CAPÍTULO 1: DESVENDE OS BAÚS SECRETOS ===
+console.log( "" );
+console.log( "🗝️ CAPÍTULO 1: Descobrindo os Cofres Misteriosos" );
+
+let pocoesEncontradas = [ "Poção Suprema", "Essência de Gigante", "Véu da Invisibilidade" ];
+let armadilhasAtivadas = [];
+
+console.log( "🧪 Primeira poção obtida: " + pocoesEncontradas[ 0 ] );
+console.log( "⚗️ Quantidade de poções raras: " + pocoesEncontradas.length );
+
+inventario[ 0 ] = "Elixir Vital Supremo";
+console.log( "✨ " + nomePersonagem + " aprimorou seu elixir!" );
+
+inventario.push( "Bracelete Guardião" );
+console.log( "💍 Novo artefato inserido! Mochila agora: " + inventario );
+
+let itemRemovido = inventario.pop();
+console.log( "📤 Item descartado: " + itemRemovido );
+console.log( "🎒 Mochila atualizada: " + inventario );
